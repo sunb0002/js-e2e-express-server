@@ -17,8 +17,10 @@ pool:
 steps:
 - script: echo Hello Fate Zero!
   displayName: 'Install Node.js (just echo)'
-
-- task: SonarQubeAnalyze@5
-- task: SonarQubePublish@5
+- task: SonarQubePrepare@5
   inputs:
-    pollingTimeoutSec: '300'
+    SonarQube: 'MySonar'
+    scannerMode: 'MSBuild'
+    projectKey: 'HelloADO'
+  
+- task: SonarQubeAnalyze@5
