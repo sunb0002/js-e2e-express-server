@@ -5,11 +5,11 @@
 
 trigger: none # Disable CI triggers, but schedule/pipeline trigger still works.
 
-resources:
-  pipelines: 
-    - pipeline: upstream-pipeline
-      source: sunb0002.transferfile
-      trigger: true
+# resources:
+#   pipelines: 
+#     - pipeline: upstream-pipeline
+#       source: sunb0002.transferfile
+#       trigger: true
 
 pool:
   vmImage: 'ubuntu-latest'
