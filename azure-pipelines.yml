@@ -16,6 +16,7 @@ steps:
 
 - script: |
     npm run build
+    echo Deploy path: $(Build.ArtifactStagingDirectory)
   displayName: 'npm build'
 
 - task: CopyFiles@2
